@@ -82,7 +82,7 @@ def population():
     #population_dict["1970"] = population.Yr_1970
     #population_dict["1971"] = population.Yr_1971
     
-    result_dict = [u.__dict__ for u in ]
+    result_dict = [u.__dict__ for u in Population_urban.fetchall()]
     return jsonify(population_urban_dict)
 
 if __name__ == "__main__":
