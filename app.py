@@ -44,17 +44,23 @@ Base.prepare(engine, reflect = True)
 
 # automap tables
 
-## raw population numbers
-Population = Table("Population", meta, autoload=True, autoload_with=engine)
+## raw urban population numbers
+Population_urban = Table("population_urban", meta, autoload=True, autoload_with=engine)
+
+## raw suburban population numbers
+Population_suburban = Table("population_suburban", meta, autoload=True, autoload_with=engine)
+
+## raw total population numbers
+Population_total = Table("population_total", meta, autoload=True, autoload_with=engine)
 
 ## population year over year percents
-PopulationYoY = Table("PopulationYoY", meta, autoload=True, autoload_with=engine)
+PopulationYoY = Table("populationYoY", meta, autoload=True, autoload_with=engine)
 
 ## raw employment numbers
-Employment = Table("Employment", meta, autoload=True, autoload_with=engine)
+Employment = Table("employment", meta, autoload=True, autoload_with=engine)
 
 ## employment year over year percents
-EmploymentYoY = Table("EmploymentYoY", meta, autoload=True, autoload_with=engine)
+EmploymentYoY = Table("employmentYoY", meta, autoload=True, autoload_with=engine)
 
 # start session
 session = Session(engine)
@@ -63,23 +69,24 @@ session = Session(engine)
 # FLASK ROUTES
 #######################
 
-@app.route("/")
-def index():
-    return "welcome"
+# @app.route("/")
+# def index():
+#     return "welcome"
 
-@app.route("/population")
-def population():
-    results = session.query(Population).all()
+# @app.route("/population_urban")
+# def population():
+#     results = session.query(Population_urban).all()
     
-    all_populations = []
-    for result in results:
-        population_dict = {}
-        population_dict["Region"] = population.region
-        population_dict["1970"] = population.year
-        population_dict["1971"] = population.year
-        all_populations.append(population_dict)
+#     population_urban = []
+#     for result in results:
+#         population_urban_dict = {}
+#         population_urban_dict["region"] = population.Region
+#         population_urban_dict["cbsa_code"] = population.CBSA_Code
+#         population_dict["1970"] = population.Yr_1970
+#         population_dict["1971"] = population.Yr_1971
+#         population_urban.append(population_urban_dict)
 
-    return jsonify(all_populations)
+#     return jsonify(population_urban)
 
-if __name__ == "__main__":
-    app.run(debug = True)
+# if __name__ == "__main__":
+#     app.run(debug = True)pop
