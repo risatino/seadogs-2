@@ -2,37 +2,15 @@
 # IMPORT DEPENDENCIES
 ######################
 
-import numpy as np
 
 # SQL Alchemy (ORM)
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, inspect, func, desc, Table
 
-# flask (server)
-from flask import(
-    Flask, 
-    render_template, 
-    jsonify, 
-    request,
-    redirect)
-
-#######################
-# FLASK SET-UP
-#######################
-app = Flask(__name__)
-
 #######################
 # DATABASE SET-UP
 #######################
-
-# dependency
-from flask_sqlalchemy import SQLAlchemy
-
-# heroku set-up
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///Datasets/cbsa_demographics.sqlite"
-
-db = SQLAlchemy(app)
 
 # create engine
 engine = create_engine("sqlite:///Datasets/cbsa_demographics.sqlite")
@@ -62,28 +40,8 @@ Employment = Table("employment", meta, autoload=True, autoload_with=engine)
 ## employment year over year percents
 EmploymentYoY = Table("employmentYoY", meta, autoload=True, autoload_with=engine)
 
+# reflect the tables
+Base.prepare(engine, reflect=True)
+Population_urban = Base.classes.population_urban
 # start session
 session = Session(engine)
-
-#######################
-# FLASK ROUTES
-#######################
-
-@app.route("/")
-def index():
-    return "welcome"
-
-@app.route("/population_urban")
-def population():
-    #results = session.query(Population_urban).all()
-    population_urban_dict = {}
-    population_urban_dict["region"] = engine.execute("select region from Population_urban").fetchall()
-    population_urban_dict["cbsa_code"] = engine.execute("select cbsa_code from Population_urban").fetchall()
-    #population_dict["1970"] = population.Yr_1970
-    #population_dict["1971"] = population.Yr_1971
-    
-    result_dict = [u.__dict__ for u in ]
-    return jsonify(population_urban_dict)
-
-if __name__ == "__main__":
-    app.run(debug = True)
