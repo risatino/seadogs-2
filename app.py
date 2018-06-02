@@ -45,16 +45,16 @@ Base.prepare(engine, reflect = True)
 # automap tables
 
 ## raw population numbers
-population = Table("population", meta, autoload=True, autoload_with=engine)
+Population = Table("Population", meta, autoload=True, autoload_with=engine)
 
 ## population year over year percents
-populationYoY = Table("populationYoY", meta, autoload=True, autoload_with=engine)
+PopulationYoY = Table("PopulationYoY", meta, autoload=True, autoload_with=engine)
 
 ## raw employment numbers
-employment = Table("employment", meta, autoload=True, autoload_with=engine)
+Employment = Table("Employment", meta, autoload=True, autoload_with=engine)
 
 ## employment year over year percents
-employmentYoY = Table("employmentYoY", meta, autoload=True, autoload_with=engine)
+EmploymentYoY = Table("EmploymentYoY", meta, autoload=True, autoload_with=engine)
 
 # start session
 session = Session(engine)
@@ -69,8 +69,17 @@ def index():
 
 @app.route("/population")
 def population():
-    results = session.query(population)
-    return jsonify(results)
+    results = session.query(Population).all()
+    
+    all_populations = []
+    for result in results:
+        population_dict = {}
+        population_dict["Region"] = population.region
+        population_dict["1970"] = population.year
+        population_dict["1971"] = population.year
+        all_populations.append(population_dict)
+
+    return jsonify(all_populations)
 
 if __name__ == "__main__":
     app.run(debug = True)
