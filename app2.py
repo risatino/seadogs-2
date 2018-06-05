@@ -483,11 +483,15 @@ def popSuburbanList():
     
         all_populations.append(population_suburban_dict)
   
-        return jsonify(all_populations)
+    return jsonify(all_populations)
     
 @app.route("/population_total")
 def popTotalList():
     results = session.query(Population_total).all()
+    print("-------")
+    print(len(results))
+    print("-------")
+    print(type(results))
 
     all_populations = []
     for population_total in results:
@@ -548,7 +552,8 @@ def popTotalList():
 
         all_populations.append(population_total_dict)
   
-        return jsonify(all_populations)
+    print(type(all_populations))
+    return jsonify(all_populations)
 
 @app.route("/employment_urban")
 def empUrbanList():
@@ -557,6 +562,7 @@ def empUrbanList():
 
     all_employment = []
     for employment_urban in results:
+        print("pie")
         employment_urban_dict = {}
         employment_urban_dict["region"] = employment_urban.region
         employment_urban_dict["lat"] = employment_urban.lat
@@ -594,7 +600,7 @@ def empUrbanList():
     
         all_employment.append(employment_urban_dict)
   
-        return jsonify(all_employment)
+    return jsonify(all_employment)
 
 @app.route("/employment_suburban")
 def empSuburbanList():
@@ -640,7 +646,7 @@ def empSuburbanList():
 
         all_employment.append(employment_suburban_dict)
   
-        return jsonify(all_employment)
+    return jsonify(all_employment)
 
 if __name__ == "__main__":
     app.run(debug = True)
