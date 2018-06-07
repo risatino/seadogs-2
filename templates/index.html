@@ -12,6 +12,7 @@
           
     <!-- highcharts -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <!--[if lt IE 9]>
       <script src="https://code.highcharts.com/modules/oldie.js"></script>
     <![endif]-->
@@ -25,10 +26,7 @@
   </head>
 
   <body>
-    <!-- <div class="container">
-      <h1>The Lattitude Report</h1>
-    </div> -->
-
+<!-- Navigation Start -->
     <nav class="navbar navbar-default static-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -68,87 +66,36 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
-  <div class="container">
-    <div class="row">
-    <h3>Overview</h3>
-      <p>WeatherPy is a Weather Analysis Report Using Pandas, Matplotlib and the <a href="https://openweathermap.org/">OpenWeatherMap API</a></p>
-      <p></p>
-    </div>
-  </div>
-<hr>
-  <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="../static/images/LatVsHumidity_percent.png" alt="humidity"/>
-        </div>
-        <div class="col-md-6">
-          <img src="../static/images/LatVsTemp_F.png" alt="temperature"/>
-        </div>
-      </div>
-<br>
-      <div class="row">
-        <div class="col-md-3">
-          <img src="../static/images/under_development200px.png" alt="humidity"/>
-        </div>
-        <div class="col-md-3">
-          <img src="../static/images/under_development200px.png" alt="temperature" />
-        </div>
-        <div class="col-md-3">
-          <img src="../static/images/under_development200px.png" alt="temperature" />
-        </div>
-        <div class="col-md-3">
-          <img src="../static/images/under_development200px.png" alt="temperature" />
-        </div>
-      </div>
-    </div>
-<br>
-<hr>
-  <div class="container">
-    <div class="row">
-      <ol>
-        <br>
-        <li>There seems to a visible temperature drop in the latitude range of 40-60 (Northern hemisphere). Also, every 20 degrees in latitude is roughly a 20 degrees drop in temperature(F).</li> 
-        <br>
-        <li>The highest concentration of humidity appears to occur in cities located between the 40-60 latitude range (Northern hemisphere). I don't believe there is any relationship between latitude and cloudiness, but based on the plot graph, there are several cities that collect at 0%, 80% and 100%.</li>
-        <br>
-        <li>Cities located in latitudes of the 40-60 range (Northern hemisphere) seem to report the highest wind speed.</li>
-      </ol>
-    </div>
-  </div>
-
-
+<!-- Navigation End -->
 <!-- HighChartsJS demo -->
-<!-- Block 1 HTML -->
 
 <div class="container">
-  
+  <div class="row">
+  <h3>Overview</h3>
+    <h4>Is Urbanization On The Decline?</h4>
+    <p>Our team utilized <a href="fig1.html">LeafletJS</a> and <a href="fig2.html">HighChartJS</a> charting libraries, built working Flask API endpoints, and SQLite as our database.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+  <h3>Three Key Analysis Points</h3>
+  </div>
+<br>
 <!-- ACCORDION -->
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
 <!-- PANEL -->
   <div class="panel panel-default documents" style="display: block;">
     <div class="panel-heading" role="tab">
-      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel0">0. Reduce unnecessary jail admissions</a></h4>
+      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel0">0. HighChartJS</a></h4>
     </div>
     <div id="panel0" class="panel-collapse collapse" role="tabpanel">
       <div class="panel-body">
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-12">
             <a href="#modal01" data-target="#modal01" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>0.1. Arrest Data</h5>
-          </div>
-          <div class="col-sm-3">
-            <a href="#modal02" data-target="#modal02" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>0.2. Number of individuals booked into jail, new crime</h5>
-          </div>
-          <div class="col-sm-3">
-            <a href="#modal03" data-target="#modal03" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>0.3. Number of individuals booked into jail, arrest warrant</h5>
-          </div>
-          <div class="col-sm-3">
-            <a href="#modal04" data-target="#modal04" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>0.4. Number of individuals booked into jail, sentenced</h5>
+            <h5>0.1. Overview HighChartJS</h5>
           </div>
         </div>
       </div>
@@ -203,81 +150,6 @@
           <div class="col-sm-3">
             <a href="#modal24" data-target="#modal24" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
             <h5>2.4. Ratio of average length of stay of sentenced individuals nonwhite to white, released from jail</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PANEL -->
-  <div class="panel panel-default documents" style="display: block;">
-    <div class="panel-heading" role="tab">
-      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel3">3. Reduce unnecessary length of stay</a></h4>
-    </div>
-    <div id="panel3" class="panel-collapse collapse" role="tabpanel">
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-sm-3">
-            <a href="#modal31" data-target="#modal31" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>3.1. Average length of stay among individuals released from jail</h5>
-          </div>
-          <div class="col-sm-3">
-            <a href="#modal32" data-target="#modal32" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>3.2. Average length of stay among pretrial individuals released from jail</h5>
-          </div>
-         <div class="col-sm-3">
-            <a href="#modal33" data-target="#modal33" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>3.3. Average length of stay among sentenced individuals released from jail, pretrial</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PANEL -->
-  <div class="panel panel-default documents" style="display: block;">
-    <div class="panel-heading" role="tab">
-      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel4">4. Reduce flow into prisons</a></h4>
-    </div>
-    <div id="panel4" class="panel-collapse collapse" role="tabpanel">
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-sm-3">
-            <a href="#modal41" data-target="#modal41" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>4.1. Number of individuals in prison</h5>
-          </div>
-          <div class="col-sm-3">
-            <a href="#modal42" data-target="#modal42" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>4.2. Number and percentage of individuals convicted and locally sentenced to prison</h5>
-          </div>
-          <div class="col-sm-3">
-            <a href="#modal42" data-target="#modal42" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>4.3. Number and percentage of individuals released from jail into state prison custody</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
- <!-- PANEL -->
-  <div class="panel panel-default documents" style="display: block;">
-    <div class="panel-heading" role="tab">
-      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel5">5. Increase awareness about the use and misuse of jails</a></h4>
-    </div>
-    <div id="panel5" class="panel-collapse collapse" role="tabpanel">
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-sm-3">
-            <a href="#modal51" data-target="#modal51" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>5.1. How fair do you believe your local criminal justice system is?</h5>
-          </div>
-          <div class="col-sm-3">
-            <a href="#modal52" data-target="#modal52" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>5.2. Why are minorities more likely to end up in jail? (multiple choice)</h5>
-          </div>
-         <div class="col-sm-3">
-            <a href="#modal53" data-target="#modal53" data-toggle="modal"><img src="../static/images/under_development200px.png"></a>
-            <h5>5.3. Over the past year, have you become aware of any changes or reforms to law enforcement/police, jails, or court systems in your community?</h5>
           </div>
         </div>
       </div>
@@ -348,158 +220,49 @@
   </div>
 </div>
 
-<div class="modal fade wide" id="modal22" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
-        <h2 class="modal-title" class="ss-standard ss-alert">2.2. Percentage of non-white confined population</h2>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 chart-wrap">
-              <div id="percentage_nwcp_cook" class="chart"></div>
-            </div>
-          </div>
+<br>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <img src="../static/images/Fig1-temperature.png" alt="temperature-detail"/>    
         </div>
-      </div>
+        <br>
+        <div class="col-md-3">
+            <hr>
+            <p>This is a detail view of the Latitude VS Temperature (one year ago) on January 5, 2017.</p>
+        </div>
     </div>
   </div>
+<br>
+
 </div>
 
-<div class="modal fade wide" id="modal31" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
-        <h2 class="modal-title" class="ss-standard ss-alert">3.1. Average Length of Stay Among Individuals Released From Jail</h2>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 chart-wrap">
-              <div id="averagelen_of_stay_cook" class="chart"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- HighCharts JS -->
+    <script src="../static/js/highcharts.js"></script>
+    <script>
+    $(function() {
+    Highcharts.setOptions({lang: { numericSymbols: null,thousandsSep: ','},});var setFontsize = '20px';var setFontsizeLegend = '22px';var topMargin = 20;var axisMargin = 20;var rightMargin = 200;var bgColor = '#252830';
+    //Chart Data
+    var arrestdata_cook = [{ name: 'Cook County, IL (Local)',color: '#1ca8dd',dashStyle: 'Solid',data: [193.1,181.8,175.0,169.9,154.2,139.6,null,null],zIndex: 1,visible: true},{ name: 'Synthetic Match (BJS)',color:'#00b324',dashStyle: 'ShortDash',data: [497.1,455.3,427.7,422.1,410.2,372.9,null,null],visible: true},{ name: 'Will County, IL (BJS)',color: '#E3E3E6',dashStyle: 'ShortDashDot',data: [113.7,106.7,103.5,97.0,94.8,92.8],visible: true}];
+    //Make Chart
+    $("#arrestdata_cook").highcharts({chart: { marginRight: rightMargin,marginTop: topMargin,backgroundColor:bgColor,type: 'line',alignTicks: false},legend: { layout: 'horizontal',itemStyle: { fontSize: setFontsizeLegend}},credits: false,exporting: { enabled: false},title: false,xAxis: [{title: { style: { fontSize: setFontsize},margin: axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 4.5,zIndex: 1,label: { text: 'Strategy Approved',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories: [2010,2011,2012,2013,2014,2015,2016,2017],tickmarkPlacement: 'off',labels: {style: { fontSize: setFontsize}}}],yAxis:[{title: { text: 'Total Arrest Rate per 10,000 (1,000 displayed)',style: { fontSize: setFontsize},margin: axisMargin},max: 1000,min: 0,tickInterval: 250,labels: { formatter: function() {return Highcharts.numberFormat(this.value,0);},style: { fontSize: setFontsize}}}],tooltip: { shared: true,useHTML: true,headerFormat: '<h5>{point.key}</h5>',pointFormat: '<span style="color:{series.color}">●</span> {series.name}: <b>{point.y}</b><br>',style: { fontSize: setFontsize}},plotOptions: { column: { dataLabels: { style: { fontSize: setFontsize}},style: { color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',fontSize: setFontsize}},series: { lineWidth: 4,marker: { fillColor: bgColor,radius: 6,lineWidth: 4,lineColor: null,states: { hover: { enabled: true, radiusPlus: 4}}},states: { hover: { enabled: true,lineWidthPlus: 2}}}},series: arrestdata_cook});
+    //Chart Data
+    var adp_cook=[{name:'Cook County, IL (Local)',color:'#1ca8dd',dashStyle:'Solid',data:[9586,9576,9823,10565,10055,8515,null,null,null,null],zIndex:1,visible:!0},{name:'Synthetic Match (BJS)',color:'#00b324',dashStyle:'ShortDash',data:[3575,3434,3434,3328,3476,3225,null,null,null,null],visible:!0},{name:'Will County, IL (BJS)',color:'#E3E3E6',dashStyle:'ShortDashDot',data:[712,697,795,893,835,776,null,null,null,null],visible:!0},{name:'Target',color:'#cc00ff',dashStyle:'ShortDash',data:[null,null,null,null,null,null,2500,2500,2500,2500],marker:{enabled:!1},zIndex:1,visible:!0}]
+    //Make Chart
+    $("#adp_cook").highcharts({chart: { marginRight: rightMargin,marginTop: topMargin,backgroundColor:bgColor,type: 'line',alignTicks: false},legend: { layout: 'horizontal',itemStyle: { fontSize: setFontsizeLegend}},credits: false,exporting: { enabled: false},title: false,xAxis: [{title: { style: { fontSize: setFontsize},margin: axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 4.5,zIndex: 1,label: { text: 'Strategy Approved',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019],tickmarkPlacement: 'off',labels: {style: { fontSize: setFontsize}}}],yAxis:[{title: { text: 'Average Daily Population',style: { fontSize: setFontsize},margin: axisMargin},max: 15000,min: 0,tickInterval: 2500,labels: { formatter: function() {return Highcharts.numberFormat(this.value,0);},style: { fontSize: setFontsize}}}],tooltip: { shared: true,useHTML: true,headerFormat: '<h5>{point.key}</h5>',pointFormat: '<span style="color:{series.color}">●</span> {series.name}: <b>{point.y}</b><br>',style: { fontSize: setFontsize}},plotOptions: { column: { dataLabels: { style: { fontSize: setFontsize}},style: { color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',fontSize: setFontsize}},series: { lineWidth: 4,marker: { fillColor: bgColor,radius: 6,lineWidth: 4,lineColor: null,states: { hover: { enabled: true, radiusPlus: 4}}},states: { hover: { enabled: true,lineWidthPlus: 2}}}},series: adp_cook});
+    //Chart Data
+    var adsp_cook = [{ name: 'Cook County, IL (Local)',color: '#1ca8dd',dashStyle: 'Solid',data: [82784,80912,78416,78780,112424,92795,null,null],zIndex: 1,visible: true},{ name: 'Synthetic Match (BJS)',color:'#00b324',dashStyle: 'ShortDash',data: [51152,47354,46008,45770,45214,42084,null,null],visible: true},{ name: 'Will County, IL (BJS)',color: '#E3E3E6',dashStyle: 'ShortDashDot',data: [10608,2028,6422,10816,11708,12599,null,null],visible: true}];
+    //Make Chart
+    $("#adsp_cook").highcharts({chart: { marginRight: rightMargin,marginTop: topMargin,backgroundColor:bgColor,type: 'line',alignTicks: false},legend: { layout: 'horizontal',itemStyle: { fontSize: setFontsizeLegend}},credits: false,exporting: { enabled: false},title: false,xAxis: [{title: { style: { fontSize: setFontsize},margin: axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 4.5,zIndex: 1,label: { text: 'Strategy Approved',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories: [2010,2011,2012,2013,2014,2015,2016,2017],tickmarkPlacement: 'off',labels: {style: { fontSize: setFontsize}}}],yAxis:[{title: { text: 'Average Daily Sentenced Population',style: { fontSize: setFontsize},margin: axisMargin},max: 120000,min: 0,tickInterval: 30000,labels: { formatter: function() {return Highcharts.numberFormat(this.value,0);},style: { fontSize: setFontsize}}}],tooltip: { shared: true,useHTML: true,headerFormat: '<h5>{point.key}</h5>',pointFormat: '<span style="color:{series.color}">●</span> {series.name}: <b>{point.y}</b><br>',style: { fontSize: setFontsize}},plotOptions: { column: { dataLabels: { style: { fontSize: setFontsize}},style: { color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',fontSize: setFontsize}},series: { lineWidth: 4,marker: { fillColor: bgColor,radius: 6,lineWidth: 4,lineColor: null,states: { hover: { enabled: true, radiusPlus: 4}}},states: { hover: { enabled: true,lineWidthPlus: 2}}}},series: adsp_cook});
 
-<div class="modal fade wide" id="modal51" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
-        <h2 class="modal-title" class="ss-standard ss-alert">5.1. How fair do you believe your local criminal justice system is?</h2>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 chart-wrap">
-              <div id="fairness_cjr_cook" class="chart"></div>
-            <hr><p style="font-size:1em;color:white;"><b>Unweighted N</b><br><em>Footnote: 2016 N = 903 | 2017 N = 900</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade wide" id="modal52" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
-        <h2 class="modal-title" class="ss-standard ss-alert">5.2. Why are minorities more likely to end up in jail? (multiple choice)</h2>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 chart-wrap">
-              <div id="minorities_jail_cook" class="chart"></div>
-              <hr><p style="font-size:1em;color:white;"><b>Unweighted N</b><br><em>Footnote: 2016 N = 903 | 2017 N = 900</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade wide" id="modal53" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
-        <h2 class="modal-title" class="ss-standard ss-alert">5.3. Over the past year, have you become aware of any changes or reforms to law enforcement/police, jails, or court systems in your community?</h2>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 chart-wrap">
-              <div id="reforms_courts_cook" class="chart"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<script>
-$(function() {
-Highcharts.setOptions({lang: { numericSymbols: null,thousandsSep: ','},});var setFontsize = '20px';var setFontsizeLegend = '22px';var topMargin = 20;var axisMargin = 20;var rightMargin = 200;var bgColor = '#252830';
-//Chart Data
-var arrestdata_cook = [{ name: 'Cook County, IL (Local)',color: '#1ca8dd',dashStyle: 'Solid',data: [193.1,181.8,175.0,169.9,154.2,139.6,null,null],zIndex: 1,visible: true},{ name: 'Synthetic Match (BJS)',color:'#00b324',dashStyle: 'ShortDash',data: [497.1,455.3,427.7,422.1,410.2,372.9,null,null],visible: true},{ name: 'Will County, IL (BJS)',color: '#E3E3E6',dashStyle: 'ShortDashDot',data: [113.7,106.7,103.5,97.0,94.8,92.8],visible: true}];
-//Make Chart
-$("#arrestdata_cook").highcharts({chart: { marginRight: rightMargin,marginTop: topMargin,backgroundColor:bgColor,type: 'line',alignTicks: false},legend: { layout: 'horizontal',itemStyle: { fontSize: setFontsizeLegend}},credits: false,exporting: { enabled: false},title: false,xAxis: [{title: { style: { fontSize: setFontsize},margin: axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 4.5,zIndex: 1,label: { text: 'Strategy Approved',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories: [2010,2011,2012,2013,2014,2015,2016,2017],tickmarkPlacement: 'off',labels: {style: { fontSize: setFontsize}}}],yAxis:[{title: { text: 'Total Arrest Rate per 10,000 (1,000 displayed)',style: { fontSize: setFontsize},margin: axisMargin},max: 1000,min: 0,tickInterval: 250,labels: { formatter: function() {return Highcharts.numberFormat(this.value,0);},style: { fontSize: setFontsize}}}],tooltip: { shared: true,useHTML: true,headerFormat: '<h5>{point.key}</h5>',pointFormat: '<span style="color:{series.color}">●</span> {series.name}: <b>{point.y}</b><br>',style: { fontSize: setFontsize}},plotOptions: { column: { dataLabels: { style: { fontSize: setFontsize}},style: { color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',fontSize: setFontsize}},series: { lineWidth: 4,marker: { fillColor: bgColor,radius: 6,lineWidth: 4,lineColor: null,states: { hover: { enabled: true, radiusPlus: 4}}},states: { hover: { enabled: true,lineWidthPlus: 2}}}},series: arrestdata_cook});
-//Chart Data
-var adp_cook=[{name:'Cook County, IL (Local)',color:'#1ca8dd',dashStyle:'Solid',data:[9586,9576,9823,10565,10055,8515,null,null,null,null],zIndex:1,visible:!0},{name:'Synthetic Match (BJS)',color:'#00b324',dashStyle:'ShortDash',data:[3575,3434,3434,3328,3476,3225,null,null,null,null],visible:!0},{name:'Will County, IL (BJS)',color:'#E3E3E6',dashStyle:'ShortDashDot',data:[712,697,795,893,835,776,null,null,null,null],visible:!0},{name:'Target',color:'#cc00ff',dashStyle:'ShortDash',data:[null,null,null,null,null,null,2500,2500,2500,2500],marker:{enabled:!1},zIndex:1,visible:!0}]
-//Make Chart
-$("#adp_cook").highcharts({chart: { marginRight: rightMargin,marginTop: topMargin,backgroundColor:bgColor,type: 'line',alignTicks: false},legend: { layout: 'horizontal',itemStyle: { fontSize: setFontsizeLegend}},credits: false,exporting: { enabled: false},title: false,xAxis: [{title: { style: { fontSize: setFontsize},margin: axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 4.5,zIndex: 1,label: { text: 'Strategy Approved',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019],tickmarkPlacement: 'off',labels: {style: { fontSize: setFontsize}}}],yAxis:[{title: { text: 'Average Daily Population',style: { fontSize: setFontsize},margin: axisMargin},max: 15000,min: 0,tickInterval: 2500,labels: { formatter: function() {return Highcharts.numberFormat(this.value,0);},style: { fontSize: setFontsize}}}],tooltip: { shared: true,useHTML: true,headerFormat: '<h5>{point.key}</h5>',pointFormat: '<span style="color:{series.color}">●</span> {series.name}: <b>{point.y}</b><br>',style: { fontSize: setFontsize}},plotOptions: { column: { dataLabels: { style: { fontSize: setFontsize}},style: { color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',fontSize: setFontsize}},series: { lineWidth: 4,marker: { fillColor: bgColor,radius: 6,lineWidth: 4,lineColor: null,states: { hover: { enabled: true, radiusPlus: 4}}},states: { hover: { enabled: true,lineWidthPlus: 2}}}},series: adp_cook});
-//Chart Data
-var adsp_cook = [{ name: 'Cook County, IL (Local)',color: '#1ca8dd',dashStyle: 'Solid',data: [82784,80912,78416,78780,112424,92795,null,null],zIndex: 1,visible: true},{ name: 'Synthetic Match (BJS)',color:'#00b324',dashStyle: 'ShortDash',data: [51152,47354,46008,45770,45214,42084,null,null],visible: true},{ name: 'Will County, IL (BJS)',color: '#E3E3E6',dashStyle: 'ShortDashDot',data: [10608,2028,6422,10816,11708,12599,null,null],visible: true}];
-//Make Chart
-$("#adsp_cook").highcharts({chart: { marginRight: rightMargin,marginTop: topMargin,backgroundColor:bgColor,type: 'line',alignTicks: false},legend: { layout: 'horizontal',itemStyle: { fontSize: setFontsizeLegend}},credits: false,exporting: { enabled: false},title: false,xAxis: [{title: { style: { fontSize: setFontsize},margin: axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 4.5,zIndex: 1,label: { text: 'Strategy Approved',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories: [2010,2011,2012,2013,2014,2015,2016,2017],tickmarkPlacement: 'off',labels: {style: { fontSize: setFontsize}}}],yAxis:[{title: { text: 'Average Daily Sentenced Population',style: { fontSize: setFontsize},margin: axisMargin},max: 120000,min: 0,tickInterval: 30000,labels: { formatter: function() {return Highcharts.numberFormat(this.value,0);},style: { fontSize: setFontsize}}}],tooltip: { shared: true,useHTML: true,headerFormat: '<h5>{point.key}</h5>',pointFormat: '<span style="color:{series.color}">●</span> {series.name}: <b>{point.y}</b><br>',style: { fontSize: setFontsize}},plotOptions: { column: { dataLabels: { style: { fontSize: setFontsize}},style: { color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',fontSize: setFontsize}},series: { lineWidth: 4,marker: { fillColor: bgColor,radius: 6,lineWidth: 4,lineColor: null,states: { hover: { enabled: true, radiusPlus: 4}}},states: { hover: { enabled: true,lineWidthPlus: 2}}}},series: adsp_cook});
-//Chart Data
-var percentage_nwcp_cook = [{ name: 'Cook County, IL (Local)',color: '#1ca8dd',dashStyle: 'Solid',data: [91,91,91,62,91,90,null,null],zIndex: 1,visible: true},{ name: 'Synthetic Match (BJS)',color:'#00b324',dashStyle: 'ShortDash',data: [69,68,67,68,67,66,null,null],visible: true},{ name: 'Will County, IL (BJS)',color: '#E3E3E6',dashStyle: 'ShortDashDot',data: [67,67,63,60,60,60,null,null],visible: true}];
-//Make Chart
-$("#percentage_nwcp_cook").highcharts({chart: { marginRight: rightMargin,marginTop: topMargin,backgroundColor:bgColor,type: 'line',alignTicks: false},legend: { layout: 'horizontal',itemStyle: { fontSize: setFontsizeLegend}},credits: false,exporting: { enabled: false},title: false,xAxis: [{title: { style: { fontSize: setFontsize},margin: axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 4.5,zIndex: 1,label: { text: 'Strategy Approved',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories: [2010,2011,2012,2013,2014,2015,2016,2017],tickmarkPlacement: 'off',labels: {style: { fontSize: setFontsize}}}],yAxis:[{title: { text: '% of Non-White Confined Population',style: { fontSize: setFontsize},margin: axisMargin},max: 100,min: 0,tickInterval: 25,labels: { formatter: function() {return Highcharts.numberFormat(this.value,0);},style: { fontSize: setFontsize}}}],tooltip: { shared: true,useHTML: true,headerFormat: '<h5>{point.key}</h5>',pointFormat: '<span style="color:{series.color}">●</span> {series.name}: <b>{point.y}</b><br>',style: { fontSize: setFontsize}},plotOptions: { column: { dataLabels: { style: { fontSize: setFontsize}},style: { color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',fontSize: setFontsize}},series: { lineWidth: 4,marker: { fillColor: bgColor,radius: 6,lineWidth: 4,lineColor: null,states: { hover: { enabled: true, radiusPlus: 4}}},states: { hover: { enabled: true,lineWidthPlus: 2}}}},series: percentage_nwcp_cook});
-//Chart Data
-var averagelen_of_stay_cook = [{ name: 'Cook County, IL (Local)',color: '#1ca8dd',dashStyle: 'Solid',data: [42.3,43.2,45.7,48.9,32.6,33.5,null,null],zIndex: 1,visible: true},{ name: 'Synthetic Match (BJS)',color:'#00b324',dashStyle: 'ShortDash',data: [25.5,26.5,27.2,26.5,28.1,28.0,null,null],visible: true},{ name: 'Will County, IL (BJS)',color: '#E3E3E6',dashStyle: 'ShortDashDot',data: [24.5,125.4,77.8,30.1,26.3,22.5,null,null],visible: true}];
-//Make Chart
-$("#averagelen_of_stay_cook").highcharts({chart: { marginRight: rightMargin,marginTop: topMargin,backgroundColor:bgColor,type: 'line',alignTicks: false},legend: { layout: 'horizontal',itemStyle: { fontSize: setFontsizeLegend}},credits: false,exporting: { enabled: false},title: false,xAxis: [{title: { style: { fontSize: setFontsize},margin: axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 4.5,zIndex: 1,label: { text: 'Strategy Approved',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories: [2010,2011,2012,2013,2014,2015,2016,2017],tickmarkPlacement: 'off',labels: {style: { fontSize: setFontsize}}}],yAxis:[{title: { text: 'Time Served (in Days)',style: { fontSize: setFontsize},margin: axisMargin},max: 150,min: 0,tickInterval: 50,labels: { formatter: function() {return Highcharts.numberFormat(this.value,0);},style: { fontSize: setFontsize}}}],tooltip: { shared: true,useHTML: true,headerFormat: '<h5>{point.key}</h5>',pointFormat: '<span style="color:{series.color}">●</span> {series.name}: <b>{point.y}</b><br>',style: { fontSize: setFontsize}},plotOptions: { column: { dataLabels: { style: { fontSize: setFontsize}},style: { color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',fontSize: setFontsize}},series: { lineWidth: 4,marker: { fillColor: bgColor,radius: 6,lineWidth: 4,lineColor: null,states: { hover: { enabled: true, radiusPlus: 4}}},states: { hover: { enabled: true,lineWidthPlus: 2}}}},series: averagelen_of_stay_cook});
-
-//5.1. HighChart Start
-// Chart Data
-var fairness_cjr_cook = [{name:"Very Fair",color:"#2ca25f",data:[7.4,19.2,6.9,11],visible:!0},{name:"Somewhat Fair",color:"#0571b0",data:[36.2,43.5,37.8,49.5],visible:!0},{name:"Somewhat Unfair",color:"#fc8d59",data:[33.7,18.8,27.1,19.5],visible:!0},{name:"Very Unfair",color:"#e34a33",data:[13.8,7.6,17.2,5],visible:!0},{name:"Don't Know",color:"#bdbdbd",data:[8.9,10.9,11,15],visible:!0}];
-//Make Chart
-$("#fairness_cjr_cook").highcharts({chart:{marginTop:topMargin,backgroundColor:bgColor,type:"column"},legend:{layout:"horizontal",itemStyle:{fontSize:setFontsizeLegend}},credits:!1,exporting:{enabled:!1},title:!1,xAxis:[{title:{style:{fontSize:setFontsize},margin:axisMargin},plotLines: [{ color: '#ff0000',width: 2,value: 1.5,zIndex: 1,label: { text: '',verticalAlign: 'middle',textAlign: 'center',style: { color: 'white',fontWeight: 'bold',fontSize: 18}}}],categories:["Non-White 2016","White 2016", "Non-White 2017","White 2017"],tickmarkPlacement:"off",labels:{style:{fontSize:setFontsize}}}],yAxis:[{title:{text:"",style:{fontSize:setFontsize},margin:axisMargin},min:0,stackLabels:{style:{fontWeight:"bold",fontSize:setFontsize,color:Highcharts.theme&&Highcharts.theme.textColor||"white"}},labels:{formatter:function(){return Highcharts.numberFormat(this.value,0)+'N'},style:{fontSize:setFontsize}}}],tooltip:{shared:!0,useHTML:!0,headerFormat:"<h5>{point.key}</h5>",pointFormat:'<span style="color:{series.color}">●</span> {series.name}: <b>{point.y} N</b><br>',style:{fontSize:setFontsize}},plotOptions:{column:{stacking:'percent',dataLabels:{style:{fontSize:setFontsize}},style:{color:Highcharts.theme&&Highcharts.theme.contrastTextColor||"black",fontSize:setFontsize}},series:{lineWidth:1,marker:{radius:6,lineWidth:2,lineColor:null,states:{hover:{enabled:!0,radiusPlus:4}}},states:{hover:{enabled:!0,lineWidthPlus:2}}}},series:fairness_cjr_cook});
-
-//5.2. HighChart Start
-// Chart Data
-var minorities_jail_cook=[{name:"They commit more crimes.",color:"#cc4c02",data:[20.1,44.1,22.2,39],visible:!0},{name:"They are more likely to be arrested since they are targeted by police.",color:"#fe9929",data:[67.8,36.1,59,39.2],visible:!0},{name:"They tend to be poorer and less likely to be able to post bail or hire a good lawyer.",color:"#fed98e",data:[64.6,59.1,60.3,61.6],visible:!0},{name:"They are more likely to be sentenced to jail rather than put on probation.",color:"#ffffd4",data:[44.8,29.1,38.5,27.6],visible:!0}];
-//Make Chart
-$("#minorities_jail_cook").highcharts({chart:{marginTop:topMargin,backgroundColor:bgColor,type:"column"},legend:{layout:"horizontal",itemStyle:{fontSize:setFontsizeLegend}},credits:!1,exporting:{enabled:!1},title:!1,xAxis:[{title:{style:{fontSize:setFontsize},margin:axisMargin},plotLines:[{color:"#ff0000",width:2,value:1.5,zIndex:1,label:{text:"",verticalAlign:"middle",textAlign:"center",style:{color:"white",fontWeight:"bold",fontSize:18}}}],categories:["Non-White 2016","White 2016","Non-White 2017","White 2017"],tickmarkPlacement:"off",labels:{style:{fontSize:setFontsize}}}],yAxis:[{title:{text:"",style:{fontSize:setFontsize},margin:axisMargin},min:0,stackLabels:{style:{fontWeight:"bold",fontSize:setFontsize,color:Highcharts.theme&&Highcharts.theme.textColor||"white"}},labels:{formatter:function(){return Highcharts.numberFormat(this.value,0)+"N"},style:{fontSize:setFontsize}}}],tooltip:{shared:!0,useHTML:!0,headerFormat:"<h5>{point.key}</h5>",pointFormat:'<span style="color:{series.color}">●</span> {series.name}: <b>{point.y} N</b><br>',style:{fontSize:setFontsize}},plotOptions:{column:{stacking:"percent",dataLabels:{style:{fontSize:setFontsize}},style:{color:Highcharts.theme&&Highcharts.theme.contrastTextColor||"black",fontSize:setFontsize}},series:{lineWidth:1,marker:{radius:6,lineWidth:2,lineColor:null,states:{hover:{enabled:!0,radiusPlus:4}}},states:{hover:{enabled:!0,lineWidthPlus:2}}}},series:minorities_jail_cook});
-
-//5.3. HighChart Start
-// Chart Data
-var reforms_courts_cook=[{name:"Yes",color:"#008837",data:[27.5,19.7,22.2,15.3],visible:!0},{name:"No",color:"#fe9929",data:[72.5,80.3,77.8,84.7],visible:!0}];
-//Make Chart
-$("#reforms_courts_cook").highcharts({chart:{marginTop:topMargin,backgroundColor:bgColor,type:"column"},legend:{layout:"horizontal",itemStyle:{fontSize:setFontsizeLegend}},credits:!1,exporting:{enabled:!1},title:!1,xAxis:[{title:{style:{fontSize:setFontsize},margin:axisMargin},plotLines:[{color:"#ff0000",width:2,value:1.5,zIndex:1,label:{text:"",verticalAlign:"middle",textAlign:"center",style:{color:"white",fontWeight:"bold",fontSize:18}}}],categories:["Non-White 2016","White 2016","Non-White 2017","White 2017"],tickmarkPlacement:"off",labels:{style:{fontSize:setFontsize}}}],yAxis:[{title:{text:"",style:{fontSize:setFontsize},margin:axisMargin},min:0,stackLabels:{style:{fontWeight:"bold",fontSize:setFontsize,color:Highcharts.theme&&Highcharts.theme.textColor||"white"}},labels:{formatter:function(){return Highcharts.numberFormat(this.value,0)+"%"},style:{fontSize:setFontsize}}}],tooltip:{shared:!0,useHTML:!0,headerFormat:"<h5>{point.key}</h5>",pointFormat:'<span style="color:{series.color}">●</span> {series.name}: <b>{point.y} %</b><br>',style:{fontSize:setFontsize}},plotOptions:{column:{stacking:"percent",dataLabels:{style:{fontSize:setFontsize}},style:{color:Highcharts.theme&&Highcharts.theme.contrastTextColor||"black",fontSize:setFontsize}},series:{lineWidth:1,marker:{radius:6,lineWidth:2,lineColor:null,states:{hover:{enabled:!0,radiusPlus:4}}},states:{hover:{enabled:!0,lineWidthPlus:2}}}},series:reforms_courts_cook});
-
-// reflow charts in hidden modals
-$('.modal').on('shown.bs.modal', function () {$(".chart").each(function() {var chart = $(this).highcharts();chart.reflow();});});        
-$('').on('shown.bs.modal', function () {$(".chart").each(function() {var chart = $(this).highcharts();chart.reflow();});});
-});
-</script>
-  
-<!-- End HighChartsJS demo -->
+    // reflow charts in hidden modals
+    $('.modal').on('shown.bs.modal', function () {$(".chart").each(function() {var chart = $(this).highcharts();chart.reflow();});});        
+    $('').on('shown.bs.modal', function () {$(".chart").each(function() {var chart = $(this).highcharts();chart.reflow();});});
+    });
+    </script>
+      
+    <!-- End HighChartsJS demo -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
