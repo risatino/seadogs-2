@@ -617,6 +617,10 @@ session = Session(engine)
 def index():
     return render_template("index.html")
 
+@app.route("/fig2")
+def fig2():
+    return render_template("fig2.html")
+
 @app.route("/population_urban")
 def population():
     results = session.query(Population_urban).all()
