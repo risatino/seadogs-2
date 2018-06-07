@@ -615,7 +615,7 @@ session = Session(engine)
 
 @app.route("/")
 def index():
-    return "welcome"
+    return render_template("index.html")
 
 @app.route("/population_urban")
 def population():

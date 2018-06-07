@@ -7192,40 +7192,10 @@ a.list-group-item-danger.active:focus {
   margin-bottom:30px;
 }
 
-/* Implementation Site Nav */
-.breadcrumb {
-  text-transform: uppercase;
-  font-weight: none;
-  font-size: 15px;
-  letter-spacing: .9px;
+/* HighChartJS Sample Overview Chart Styles */
+#highc-container {
+  min-width: 310px; 
+  height: 400px; 
+  max-width: 800px; 
+  margin: 0 auto
 }
-
-nav.breadcrumb {
-  font-size: 16px;
-  color: #ccc;
-}
-
-nav.breadcrumb a {
-  margin: 0 5px;
-  text-decoration: none;
-  color: #999;
-}
-
-nav.breadcrumb a:first-child {
-  margin-left: 0;
-}
-
-nav.breadcrumb a:hover,
-nav.breadcrumb a:focus {
-  color: #333;
-}
-
-nav.breadcrumb a:active {
-  color: #666;
-}
-
-nav.breadcrumb strong {
-  margin-left: 5px;
-  font-weight: bold;
-  color: #333;
-} 
