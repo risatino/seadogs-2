@@ -46,10 +46,10 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <!-- <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav">
             <li><a href="/employment">EMPLOYMENT DATA SOURCE</a></li>
             <li><a href="/population">POPULATION DATA SOURCE</a></li>
-          </ul> -->
+          </ul>
 
           <ul class="nav navbar-nav navbar-right">
             
@@ -96,14 +96,20 @@
   <div class="row">
   <h3>OVERVIEW: An Interactive Comparison Data Report</h3>
     <h4>Is Urbanization On The Decline?</h4>
-    <p>Our team utilized <a href="/fig2">PlotlyJS</a> and <a href="/fig1">HighChartJS</a> charting libraries, built working Flask API endpoints, and SQLite as our database.</p>
+    <p>Utilizing <a href="/fig1">LeafletJS</a> and <a href="/fig2">HighChartJS</a> charting libraries, our team aimed to investigate whether or not Urban areas are growing at a faster pace than their Suburban counterparts. In addition to this, we wanted to look deeper into a potential cause of these trends and used employment data from the Bureau of Labor Statistics to inform our analysis further.</p>
+    <p>Based on our analysis, we discovered the following: </p>
+    <ul>
+        <li>In most cases, suburban population and employment growth outperformed urban population growth. The latter, being a potential driver of Suburban sprawl.</li>
+        <li>In addition to this, high growth areas were consolidated primary among the coast and sunbelt. Perhaps an indication that weather and immigration play a role.</li>
+      </ul>
+      <p>Though it requires deeper research, it does appear that Suburban areas are growing at a faster pace than their Urban counterparts and that a potential driver of this is employment growth. </p>
   </div>
 </div>
 
 <div class="container">
 <div class="row">
   <div class="col-md-12">
-    <iframe width="1000" height="900" frameborder="0" scrolling="no" src="https://nataliekramer.carto.com/builder/46bc0ac0-352c-4a00-a813-4dd61cc097df/embed"></iframe> 
+      <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~dhoebbel/29.embed"></iframe>
   </div>
 </div>
 </div>
