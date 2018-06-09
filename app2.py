@@ -617,9 +617,25 @@ session = Session(engine)
 def index():
     return render_template("index.html")
 
+@app.route("/fig1")
+def fig1():
+    return render_template("fig1.html")
+
 @app.route("/fig2")
 def fig2():
     return render_template("fig2.html")
+    
+@app.route("/fig3")
+def fig3():
+    return render_template("fig3.html")
+    
+@app.route("/employment")
+def employment_table():
+    return render_template("resources_employment.html")
+    
+@app.route("/population")
+def population_table():
+    return render_template("resources_population.html")
 
 @app.route("/population_urban")
 def population():
