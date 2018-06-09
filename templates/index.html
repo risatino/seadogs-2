@@ -47,7 +47,6 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">COMPARISON DATA REPORT<span class="sr-only">(current)</span></a></li>
             <li><a href="/employment">EMPLOYMENT DATA SOURCE</a></li>
             <li><a href="/population">POPULATION DATA SOURCE</a></li>
           </ul>
@@ -95,7 +94,7 @@
 
 <div class="container">
   <div class="row">
-  <h3>Overview</h3>
+  <h3>OVERVIEW: An Interactive Comparison Data Report</h3>
     <h4>Is Urbanization On The Decline?</h4>
     <p>Our team utilized <a href="/fig1">LeafletJS</a> and <a href="/fig2">HighChartJS</a> charting libraries, built working Flask API endpoints, and SQLite as our database.</p>
   </div>
@@ -112,13 +111,14 @@
 <!-- PANEL -->
   <div class="panel panel-default documents" style="display: block;">
     <div class="panel-heading" role="tab">
-      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel0">1. HighChartJS: Urbanization Trends</a></h4>
+      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel0">1. Urbanization Trends (HighChartsJS: Scatter Plot)</a></h4>
     </div>
     <div id="panel0" class="panel-collapse collapse" role="tabpanel">
       <div class="panel-body">
         <div class="row">
           <div class="col-sm-12" style="padding-top:20px;">  
             <a href="/fig1"><img src="../static/images/1accordion.png" alt="fig1-overview"/></a>
+            <h5>* Click image to see interactive HighChart</h5>
           </div>
         </div>
       </div>
@@ -128,14 +128,14 @@
   <!-- PANEL -->
   <div class="panel panel-default documents" style="display: block;">
     <div class="panel-heading" role="tab">
-      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel1">2. PlotlyJS Bubble Chart</a></h4>
+      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel1">2. Employment Stats (PlotlyJS: Bar, Heat Map, Bubble Plot)</a></h4>
     </div>
     <div id="panel1" class="panel-collapse collapse" role="tabpanel">
       <div class="panel-body">
         <div class="row">
           <div class="col-sm-12">
-            <a href="/fig2"><img src="../static/images/under_development200px.png"></a>
-            <h5>Data collection in progress...</h5>
+            <a href="/fig2"><img src="../static/images/2accordion.png"></a>
+            <h5>* Click image to see interactive Plotly charts.</h5>
           </div>
         </div>
       </div>
@@ -145,13 +145,14 @@
   <!-- PANEL -->
   <div class="panel panel-default documents" style="display: block;">
     <div class="panel-heading" role="tab">
-      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel2">3. Population Growth & Employment Over Time: PlotlyJS Heat Map</a></h4>
+      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#panel2">3. Population Growth (PlotlyJS: Bar, Heat Map, Bubble Plot)</a></h4>
     </div>
     <div id="panel2" class="panel-collapse collapse" role="tabpanel">
       <div class="panel-body">
         <div class="row">
           <div class="col-sm-12" style="padding-top:20px;">  
-            <a href="/fig3"><img src="../static/images/3accordion.png" alt="fig3-overview"/></a>
+            <a href="/fig3"><img src="../static/images/fig3-populate.png" alt="fig3-overview"/></a>
+            <h5>* Click image to see interactive Plotly charts.</h5>
           </div>
         </div>
       </div>
